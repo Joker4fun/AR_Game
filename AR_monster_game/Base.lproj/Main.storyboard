@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22113.1" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="zIy-3g-LiF">
+    <device id="retina5_9" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22089"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--App Settings View Controller-->
+        <scene sceneID="owg-L9-Bb5">
+            <objects>
+                <viewController id="aYH-xh-bZP" customClass="AppSettingsViewController" customModule="AR_monster_game" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="7fH-xe-6q9">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" semanticContentAttribute="playback" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="4gc-o7-dZS">
+                                <rect key="frame" x="0.0" y="-5" width="375" height="817"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="21G-6d-Nev">
+                                <rect key="frame" x="89" y="389" width="197" height="34"/>
+                                <color key="backgroundColor" systemColor="linkColor"/>
+                                <color key="tintColor" systemColor="opaqueSeparatorColor"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="Перейти к настройкам "/>
+                                <connections>
+                                    <action selector="openSettigns:" destination="aYH-xh-bZP" eventType="touchUpInside" id="Lo1-qu-8vx"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vlL-Xl-6hp"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="4gc-o7-dZS" firstAttribute="bottom" secondItem="7fH-xe-6q9" secondAttribute="bottom" id="1zz-Qd-WYg"/>
+                            <constraint firstItem="4gc-o7-dZS" firstAttribute="leading" secondItem="vlL-Xl-6hp" secondAttribute="leading" id="59u-aU-oVs"/>
+                            <constraint firstItem="21G-6d-Nev" firstAttribute="centerX" secondItem="7fH-xe-6q9" secondAttribute="centerX" id="8op-aH-3FX"/>
+                            <constraint firstItem="4gc-o7-dZS" firstAttribute="trailing" secondItem="vlL-Xl-6hp" secondAttribute="trailing" id="JpH-N9-bPa"/>
+                            <constraint firstItem="21G-6d-Nev" firstAttribute="centerY" secondItem="7fH-xe-6q9" secondAttribute="centerY" id="L9m-LJ-fql"/>
+                            <constraint firstItem="4gc-o7-dZS" firstAttribute="top" secondItem="7fH-xe-6q9" secondAttribute="top" constant="-5" id="lzt-Hj-389"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="settingsButton" destination="21G-6d-Nev" id="cs5-Cb-rGt"/>
+                        <segue destination="BYZ-38-t0r" kind="presentation" identifier="fromSettingsToMap" modalPresentationStyle="fullScreen" id="8tJ-zM-CcQ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="VJS-NN-fzR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="110.23255813953489" y="-759.01287553648069"/>
+        </scene>
+        <!--Geo Request View Controller-->
+        <scene sceneID="xTe-u1-53i">
+            <objects>
+                <viewController storyboardIdentifier="Geo" id="zIy-3g-LiF" customClass="GeoRequestViewController" customModule="AR_monster_game" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="JwX-ZM-NlP">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" semanticContentAttribute="playback" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="B17-dB-g0p">
+                                <rect key="frame" x="0.0" y="-5" width="375" height="817"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" alpha="0.59999999999999998" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Для того, чтобы показать Вас  и ближайших монстров, разрешите приложению доступ к вашей геопозиции" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="o9P-aj-I3I">
+                                <rect key="frame" x="66" y="309" width="243" height="67"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="tintColor" systemColor="systemGray5Color"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" alpha="0.59999999999999998" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OZB-ba-i8M">
+                                <rect key="frame" x="66" y="376.66666666666669" width="243" height="35"/>
+                                <color key="backgroundColor" systemColor="labelColor"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Разрешить"/>
+                                <connections>
+                                    <action selector="AcsessGEO:" destination="zIy-3g-LiF" eventType="touchUpInside" id="H9L-tm-wTu"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="EeO-Qb-7os"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="OZB-ba-i8M" firstAttribute="top" secondItem="o9P-aj-I3I" secondAttribute="bottom" constant="0.66666666666668561" id="1mw-Pt-Mqt"/>
+                            <constraint firstItem="B17-dB-g0p" firstAttribute="top" secondItem="JwX-ZM-NlP" secondAttribute="top" constant="-5" id="8Dj-f6-TQj"/>
+                            <constraint firstItem="EeO-Qb-7os" firstAttribute="trailing" secondItem="OZB-ba-i8M" secondAttribute="trailing" constant="66" id="HF8-5X-0KV"/>
+                            <constraint firstAttribute="bottom" secondItem="B17-dB-g0p" secondAttribute="bottom" id="QRS-Cd-uJr"/>
+                            <constraint firstItem="OZB-ba-i8M" firstAttribute="leading" secondItem="EeO-Qb-7os" secondAttribute="leading" constant="66" id="Sjt-MR-gQN"/>
+                            <constraint firstItem="o9P-aj-I3I" firstAttribute="leading" secondItem="EeO-Qb-7os" secondAttribute="leading" constant="66" id="UMR-mQ-eTs"/>
+                            <constraint firstItem="o9P-aj-I3I" firstAttribute="top" secondItem="EeO-Qb-7os" secondAttribute="top" constant="259" id="att-Rp-TLA"/>
+                            <constraint firstItem="B17-dB-g0p" firstAttribute="leading" secondItem="EeO-Qb-7os" secondAttribute="leading" id="gOO-ZH-vj5"/>
+                            <constraint firstItem="EeO-Qb-7os" firstAttribute="trailing" secondItem="o9P-aj-I3I" secondAttribute="trailing" constant="66" id="hx8-QU-x45"/>
+                            <constraint firstItem="B17-dB-g0p" firstAttribute="trailing" secondItem="EeO-Qb-7os" secondAttribute="trailing" id="wgh-6l-scV"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="AcceptButton" destination="OZB-ba-i8M" id="JNb-lI-r67"/>
+                        <outlet property="warningText" destination="o9P-aj-I3I" id="GO5-p6-anG"/>
+                        <segue destination="aYH-xh-bZP" kind="presentation" identifier="toSettingsView" modalPresentationStyle="fullScreen" id="sr4-Dy-XAL"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bwE-Ca-nNN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-908.37209302325584" y="-401.71673819742495"/>
+        </scene>
+        <!--Map View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController storyboardIdentifier="mapID" id="BYZ-38-t0r" customClass="MapViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="pXx-Dj-CjJ"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="109.23076923076923" y="-36.96682464454976"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="background" width="375" height="807"/>
+        <systemColor name="labelColor">
+            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="linkColor">
+            <color red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="opaqueSeparatorColor">
+            <color red="0.77647058820000003" green="0.77647058820000003" blue="0.7843137255" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGray5Color">
+            <color red="0.8980392157" green="0.8980392157" blue="0.91764705879999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
